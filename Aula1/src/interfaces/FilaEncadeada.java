@@ -45,11 +45,11 @@ public class FilaEncadeada implements Fila {
         return valor;
     }
 
-    //@Override
-    //public Integer get (int index){
+    @Override
+    public Integer get (int index){
         //TODO Auto-generated method stub
-       // return null;
-    //}
+        return null;
+    }
 
     @Override
     public boolean isEmpty(){

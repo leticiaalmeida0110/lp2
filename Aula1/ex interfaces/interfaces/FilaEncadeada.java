@@ -1,8 +1,8 @@
 package interfaces;
 
-public class FilaEncadeada implements Fila {
+public class FilaEncadeada<T> implements Fila<T> {
 
-    private No inicio, fim;
+    private No<T> inicio, fim;
 
     public FilaEncadeada(){
         this.inicio = null;
@@ -10,8 +10,8 @@ public class FilaEncadeada implements Fila {
     }
 
     @Override
-    public void add(Integer valor){
-        No novo = new No(valor);
+    public void add(T valor){
+        No<T> novo = new No<T>(valor);
 
         if(isEmpty()){
             this.inicio = novo;
@@ -24,8 +24,8 @@ public class FilaEncadeada implements Fila {
     }
 
     @Override
-    public Integer remove (){
-        Integer valor = null; // retorno
+    public T remove (){
+        T valor = null; // retorno
 
         if(this.isEmpty()){
             System.out.println("Impossivel remover.");
@@ -36,7 +36,7 @@ public class FilaEncadeada implements Fila {
             this.fim = null;
            
         } else{
-            No noRemovido = this.inicio;
+            No<T> noRemovido = this.inicio;
             this.inicio = this.inicio.getProx();
             valor = noRemovido.getValor();
             noRemovido.setProx(null);
@@ -46,7 +46,7 @@ public class FilaEncadeada implements Fila {
     }
 
     @Override
-    public Integer get (int index){
+    public T get (int index){
         //TODO Auto-generated method stub
         return null;
     }
@@ -68,7 +68,7 @@ public class FilaEncadeada implements Fila {
         } else if (this.inicio == this.fim) {
             System.out.println(this.inicio.getValor());
         } else{
-            No aux = this.inicio;
+            No<T> aux = this.inicio;
             while(aux!=null){
                 System.out.println(aux.getValor());
                 aux = aux.getProx();
@@ -77,8 +77,8 @@ public class FilaEncadeada implements Fila {
     }
 
     public static void main(String[] args) {
-        Fila f1 = new FilaEncadeada();
-        FilaEncadeada f2 = new FilaEncadeada();
+        Fila<Integer> f1 = new FilaEncadeada<>();
+        FilaEncadeada<Integer> f2 = new FilaEncadeada();
 
         System.out.println("Vazia?" + f2.isEmpty());
 
@@ -100,6 +100,8 @@ public class FilaEncadeada implements Fila {
 
         //FilaEncadeada f3 = new FilaEncadeada();
         //FilaDeValor f4 = new FilaDeVetor();
+
+        
      
     }
 

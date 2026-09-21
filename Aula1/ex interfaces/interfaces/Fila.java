@@ -1,9 +1,9 @@
 package interfaces;
 
-public interface Fila {
-    public abstract void add(Integer valor);
-    public abstract Integer remove();
-    public abstract Integer get(int index);
+public interface Fila<T> {
+    public abstract void add(T valor);
+    public abstract T remove();
+    //public abstract T get(int index);
     public abstract boolean isEmpty();
     void mostra();
     
@@ -12,5 +12,5 @@ public interface Fila {
     // remove(): Integer
     // get(index: int): Integer
     // isEmpy(): boolean
-
+  
 }

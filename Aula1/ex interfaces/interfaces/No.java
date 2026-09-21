@@ -1,31 +1,33 @@
 package interfaces;
 
-public class No {
+public class No<T>{
 
-    private Integer valor;
-    private No prox;
+    private T valor;
+    private No<T> prox;
 
-    public No(Integer valor){
+    public No(T valor){
         this.valor = valor;
         this.prox = null;
     }
 
     // gets e setts
-    public Integer getValor(){
+    public T getValor(){
         return valor;
     }
 
-    public void setValor (Integer valor){
+    public void setValor (T valor){
         this.valor = valor;
     }
 
-    public No getProx(){
+    public No<T> getProx(){
         return prox;
     }
 
-    public void setProx(No prox) {
+    public void setProx(No<T> prox) {
         this.prox = prox;
     }
 
 
 }
+
+

@@ -88,7 +88,6 @@ try {
 } catch (FilaVaziaException e) {
     System.out.println("Erro: " + e.getMessage());
 }
-		
 		f2.mostra();
 	}
 

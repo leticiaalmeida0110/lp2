@@ -5,6 +5,8 @@ public class ContaInexistenteException extends Exeption{
         super("Conta não existente.");
         this.numero = numConta;
     }
-    public String
+    public String getNumero(){
+        return numero;
+    }
 
 }

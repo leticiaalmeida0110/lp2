@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+package colecoes;
+
+>>>>>>> c1b54d74647adcd01de46afe08b0a914476e8e1f
 public class Pessoa implements Comparable<Pessoa> {
 
     private String nome;
@@ -6,7 +11,15 @@ public class Pessoa implements Comparable<Pessoa> {
     private double peso;
     private char sexo;
 
+<<<<<<< HEAD
     // Construtor
+=======
+    // Construtor vazio
+    public Pessoa() {
+    }
+
+    // Construtor completo
+>>>>>>> c1b54d74647adcd01de46afe08b0a914476e8e1f
     public Pessoa(String nome, int idade, double altura, double peso, char sexo) {
         this.nome = nome;
         this.idade = idade;
@@ -15,8 +28,11 @@ public class Pessoa implements Comparable<Pessoa> {
         this.sexo = sexo;
     }
 
+<<<<<<< HEAD
     // Getters e Setters
 
+=======
+>>>>>>> c1b54d74647adcd01de46afe08b0a914476e8e1f
     public String getNome() {
         return nome;
     }
@@ -57,12 +73,18 @@ public class Pessoa implements Comparable<Pessoa> {
         this.sexo = sexo;
     }
 
+<<<<<<< HEAD
     // Método para calcular o IMC
+=======
+>>>>>>> c1b54d74647adcd01de46afe08b0a914476e8e1f
     public double calcularIMC() {
         return peso / (altura * altura);
     }
 
+<<<<<<< HEAD
     // Interpretação do IMC
+=======
+>>>>>>> c1b54d74647adcd01de46afe08b0a914476e8e1f
     public String classificacaoIMC() {
         double imc = calcularIMC();
 
@@ -77,14 +99,21 @@ public class Pessoa implements Comparable<Pessoa> {
         }
     }
 
+<<<<<<< HEAD
     // Comparable: ordenação pelo nome
     @Override
     public int compareTo(Pessoa outraPessoa) {
         return this.nome.compareTo(outraPessoa.nome);
+=======
+    @Override
+    public int compareTo(Pessoa outra) {
+        return this.nome.compareTo(outra.nome);
+>>>>>>> c1b54d74647adcd01de46afe08b0a914476e8e1f
     }
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "Nome: " + nome +
                ", Idade: " + idade +
                ", Altura: " + altura +
@@ -92,6 +121,9 @@ public class Pessoa implements Comparable<Pessoa> {
                ", Sexo: " + sexo +
                ", IMC: " + String.format("%.2f", calcularIMC()) +
                ", Classificação: " + classificacaoIMC();
+=======
+        return nome + " - " + idade + " anos - " + peso + " kg";
+>>>>>>> c1b54d74647adcd01de46afe08b0a914476e8e1f
     }
 
 }
